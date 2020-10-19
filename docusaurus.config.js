@@ -16,12 +16,6 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/",
-          activeBasePath: "docs",
-          label: "Docs",
-          position: "left",
-        },
-        {
           href: "https://io.italia.it",
           label: "IO",
           position: "right",
@@ -51,7 +45,9 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: "https://github.com/pagopa/io-docs/edit/main/docs",
+          editUrl: "https://github.com/pagopa/io-docs/edit/main/",
+
+          routeBasePath: "/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

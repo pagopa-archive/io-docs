@@ -9,6 +9,7 @@ module.exports = {
         "io-handbook/general",
         "io-handbook/how-to",
         "io-handbook/communication",
+        "io-handbook/learning",
         "io-handbook/who-does-what",
         "io-handbook/development-workflow",
         "io-handbook/development-guidelines",

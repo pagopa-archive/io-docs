@@ -39,7 +39,7 @@ We're a distributed, remote-first team where people are allowed and encouraged t
 1. Slack messages should be considered asynchronous communication and you should not expect an instantaneous response; you have no idea what the other person is doing.
 1. If you must send a private message, don't start a conversation with a greeting as that interrupts their work without communicating anything. If you have a quick question, just ask the question directly and the person will respond asynchronously. If you truly need to have a synchronous communication, then start by asking for that explicitly, while mentioning the subject. e.g. "I'm having trouble understanding issue #x, can we talk about it quickly?".
 1. Unless you're in an active chat, don't break up a topic into multiple messages as each one will result in a notification which can be disruptive. Use threads if you want to provide extra info to the question/comment you posted.
-1. In channels like `#io-questions`, threads are valuable for keeping conversations together.
+1. In channels like `#dev_io`, threads are valuable for keeping conversations together.
 1. Feel free to send a colleague a link to these guidelines if the communication in Slack should be done asynchronously.
 1. If you are having a hard time keeping up with messages, you can update your preferences to have Slack email you all notifications. To change the setting, go to `Preferences > Notifications > When I'm not active on desktop...` and `send me email notifications`.
 1. **Please avoid using @here or @channel unless this is about something urgent and important.** In chat try to keep the use of keywords that mention the whole channel to a minimum. They should only be used for pings that are both urgent and important, not just important. By overusing channel mentions you make it harder to respond to personal mentions in a timely manner since people get pinged too frequently. If something is urgent and important:
@@ -54,25 +54,21 @@ We're a distributed, remote-first team where people are allowed and encouraged t
 
 #### Slack Channels
 
-The IO team is part of the [Developers Italia Slack organization](https://slack.developers.italia.it).
+The IO team is part of the [PagoPA S.p.a.](https://pagopaspa.slack.com).
 To join our Slack channels you'll need to create an account on the Slack
 organization. The Slack organization is open and anybody can join it.
 
 The IO team hangs out in the following channels:
 
-- `#io-dev` - this is where most development activity happens, join this channel if you're actively contributing to the project
-- `#io-infra` - activity about the infrastructure that keeps IO up
-- `#io-handbook` - this is where we discuss about this handbook and propose changes
-- `#io-questions` - general questions about the project, this is a good place to ask questions about integrating with IO
-- `#io-random` - random discussions, sharing of interesting articles, chitchat
-- `#io-status` - this is populated by bots, sharing various alerts and status reports
-- `#io-ci` - this is populated by bots, sharing the status of our CI builds
-- `#io-github` - this is populated by bots, sharing the status of our Github activity
+- `#dev_io` - this is where most development activity happens, join this channel if you're actively contributing to the project
+- `#io_status` - this is populated by bots, sharing various alerts and status reports
+- `#io_ci` - this is populated by bots, sharing the status of our CI builds
+- `#io_github` - this is populated by bots, sharing the status of our Github activity
 
 ### Weekly Review and Planning calls
 
 1. Every Tuesday at 2pm CET we have the product review and planning call.
-1. We use Google Hangout
+1. We use Google Meet
 1. It is OK to talk over people or interrupt people to ask questions, cheer for them or show your compassion. This encourages more conversation and feedback in the call. Also see the interruption item in the video calls below.
 1. The sprint planning and review call is structured as follows:
    1. We start with some greetings and chitchat while we wait for all the participants to join (max 5 minutes).

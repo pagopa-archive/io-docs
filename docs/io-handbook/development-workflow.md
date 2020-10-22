@@ -62,7 +62,7 @@ into development stories that get added to the backlog of each affected componen
 
 For registering architectural decisions we rely on [Architecture Decision Records](https://github.com/joelparkerhenderson/architecture_decision_record#architecture-decision-record-adr) (ADR):
 
-See the [ADRs repository](https://github.com/teamdigitale/digital-citizenship/tree/master/architecture/decisions).
+See the [ADRs repository](https://github.com/pagopa/digital-citizenship/tree/master/architecture/decisions).
 
 ### Writing stories
 
@@ -165,4 +165,4 @@ Features and bugs have the following states:
 
 When you need to create a new project repository, use a [repository template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/). Here are the available templates:
 
-- [io-template-typescript](https://github.com/teamdigitale/io-template-typescript): For nodejs/Typescript projects
+- [io-template-typescript](https://github.com/pagopa/io-template-typescript): For nodejs/Typescript projects

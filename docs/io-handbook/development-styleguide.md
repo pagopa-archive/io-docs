@@ -217,9 +217,9 @@ if (isLeft(validatedStringEither)) {
 }
 ```
 
-### [ITALIA-TS-COMMONS](https://github.com/teamdigitale/io-ts-commons)
+### [ITALIA-TS-COMMONS](https://github.com/pagopa/io-ts-commons)
 
-#### Use [Pot](https://github.com/teamdigitale/io-ts-commons/blob/master/src/pot.ts) to handle the states of remote (potential) data.
+#### Use [Pot](https://github.com/pagopa/io-ts-commons/blob/master/src/pot.ts) to handle the states of remote (potential) data.
 
 Usually an application could deal with loading some data, from remote or local sources.
 Pot (for potential) is a data type that helps you to keep track of states, value and errors.
@@ -291,6 +291,18 @@ this.setState((prevState: State, _: Props) => {
 ```
 
 ### TESTING
+
+#### Test files must be close to the component that test
+
+Place test files in a `__tests__` folder at the same level of the file containing the module you want to test. When possible, call test files with the same name of the module file but with `.test.ts` extension.
+To test `foobar.ts`:
+
+```
+/src
+|_ /__tests__
+|  |_ foobar.test.ts
+|_ foobar.ts
+```
 
 #### Test titles must be in the form _"it should ..."_
 

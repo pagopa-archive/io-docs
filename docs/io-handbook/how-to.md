@@ -11,7 +11,7 @@ title: How to use this handbook
 1. Teamwork is easier if you can read how other parts of the company work.
 1. Discussing changes is easier if you can read what the current process is.
 1. Communicating change is easier if you can just point to a diff.
-1. Everyone can contribute to it by proposing a change in the `#io-handbook` channel on Slack.
+1. Everyone can contribute to it by proposing a change on Slack.
 1. Documenting things in the handbook takes more time initially and it requires thinking. But it saves time over a longer period and it is essential to scale and adapt our organization. It is not unlike writing tests for your software.
 1. Please follow these guidelines and remind others of them.
 1. If you need to discuss with a team member for help please realize that probably the majority of the community also doesn't know, be sure to document the answer to radiate this information to the whole team. After the question is answered discuss where it should be documented and who will do it. You can remind other people of this by asking 'who will document this'?
@@ -23,12 +23,10 @@ title: How to use this handbook
 
 ### How to propose a change
 
-Post a request in the `#io-handbook` channel on Slack, stating what you'd like to add / remove or change. You should add a link to the relevant paragraph or section.
+Post a request on Slack, stating what you'd like to add / remove or change. You should add a link to the relevant paragraph or section.
 
 For instance:
 
 ```
  I'd like to change the sentence that says "xyz" to "zyx" at this paragraph: http://.....
 ```
-
-When adding new heading2 sections, prepend the title with a cool emoji.

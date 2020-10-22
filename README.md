@@ -1,6 +1,11 @@
-# Website
+# IO Docs
 
-This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+This repository contains documentation for the IO project:
+
+https://pagopa.github.io/io-docs
+
+This website is built using [Docusaurus 2](https://v2.docusaurus.io/),
+a modern static website generator.
 
 ## Installation
 
@@ -22,12 +27,9 @@ This command starts a local development server and open up a browser window. Mos
 yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This command generates static content into the `build` directory.
 
 ## Deployment
 
-```console
-GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The website is built and deployed to GH-Pages for every change to the main branch using
+a [GitHub action](./github/documentation.yml).

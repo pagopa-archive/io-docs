@@ -62,7 +62,7 @@ We prepared [a script](https://github.com/pagopa/developer-laptop) that setup a 
 
 ### TypeScript
 
-- When creating a new repository, use the [io-template-typescript](https://github.com/teamdigitale/io-template-typescript) template - the template is also usefus as reference for our tooling and repository structure.
+- When creating a new repository, use the [io-template-typescript](https://github.com/pagopa/io-template-typescript) template - the template is also usefus as reference for our tooling and repository structure.
 - Always use [structured types](https://github.com/gcanti/io-ts): do not pass in input to unstructured data functions (eg `JSON` or `request.Express`)
 - Use [tagged types](https://blog.mariusschulz.com/2016/11/03/typescript-2-0-tagged-union-types) and [algebraic types](https://stackoverflow.com/questions/33915459/algebraic-data-types-in-typescript) instead of classes
 - Use [discriminated unions](http://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions) instead of inheritance
@@ -73,10 +73,10 @@ We prepared [a script](https://github.com/pagopa/developer-laptop) that setup a 
 - To handle errors, return [Either](https://github.com/gcanti/fp-ts/blob/master/src/Either.ts) instead of throwing exceptions
 - use `Promises` instead of callbacks for the asynchronous code. Limits the use of callbacks to interaction with existing libraries (ideally you wrap promisify callbaks though)
 - Consider using `async` / `await` instead of `then` / `catch` if it can make the code more readable
-- Use common code (types and functions) defined in [italia-ts-commons](https://github.com/teamdigitale/italia-ts-commons) (e.g. `NonEmptyString`, `DateFromString`, `EmailString`, etc.)
+- Use common code (types and functions) defined in [italia-ts-commons](https://github.com/pagopa/italia-ts-commons) (e.g. `NonEmptyString`, `DateFromString`, `EmailString`, etc.)
 - Use [io-ts](https://github.com/gcanti/io-ts) to defined types that validate at compile and run-time.
 - Use [fp-ts](https://github.com/gcanti/fp-ts) for functional data structures (i.e. `Option`, `Either`, `NonEmptyArray`, etc...)
-- Use [italia-utils](https://github.com/teamdigitale/italia-utils) for generating `io-ts` models from OpenAPI specs.
+- Use [italia-utils](https://github.com/pagopa/italia-utils) for generating `io-ts` models from OpenAPI specs.
 - Refer to the [React Typescript cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet) to type React Components
 
 ### Development Style Guide
@@ -101,6 +101,34 @@ The configuration is available in the `.prettierrc` files in each
 project root directory.
 
 If you use VSC, install the [prettier plugin](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and enable _format on save_.
+
+#### Suggested VSCode extensions
+
+If you're using VSCode we suggest to install these extensions:
+
+- [Azure account](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account)
+- [Azure cache](https://marketplace.visualstudio.com/items?itemName=ms-azurecache.vscode-azurecache)
+- [Azure functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
+- [Azure storage](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage)
+- [Code runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
+- [Codetour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)
+- [Coverage gutters](https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters)
+- [Durable functions monitor](https://marketplace.visualstudio.com/items?itemName=DurableFunctionsMonitor.durablefunctionsmonitor)
+- [Git](https://marketplace.visualstudio.com/items?itemName=kenhowardpdx.vscode-gist)
+- [GitHub](https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-github)
+- [GitHub pull requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+- [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [Jest runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner)
+- [Live share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare)
+- [Live share audio](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare-audio)
+- [Live share extensions pack](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare-pack)
+- [Pivotaly](https://marketplace.visualstudio.com/items?itemName=brayovsky.pivotaly)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Redis explorer](https://marketplace.visualstudio.com/items?itemName=Pool.redisexplorer)
+- [Settings sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+- [Terraform](https://marketplace.visualstudio.com/items?itemName=hashicorp.terraform)
+- [Tslint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
+- [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
 
 ### Code Quality
 

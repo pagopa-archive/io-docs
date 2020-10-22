@@ -6,6 +6,47 @@ title: Learning and knowledge sharing
 
 - We have a [wiki](https://sites.google.com/pagopa.it/io-wiki/io-home).
 
+### Study guide
+
+If you want to learn about languages and tech stacks we're using here are
+some useful resources:
+
+#### Functional programming
+
+https://www.manning.com/books/programming-with-types
+https://leanpub.com/composingsoftware
+http://www.tomharding.me/
+https://github.com/stoeffel/awesome-fp-js
+
+#### Testing
+
+https://kentcdodds.com/blog
+
+#### React / redux in Typescript
+
+https://github.com/piotrwitek/react-redux-typescript-guide
+
+#### fp-ts / io-ts
+
+https://dev.to/gcanti/
+https://gcanti.github.io/fp-ts/recipes/async.html
+https://gcanti.github.io/fp-ts/recipes/interoperability.html
+
+#### Azure functions
+
+https://docs.microsoft.com/en-us/azure/azure-functions/
+https://docs.microsoft.com/en-us/azure/azure-functions/durable
+
+#### API
+
+https://docs.italia.it/italia/piano-triennale-ict/lg-modellointeroperabilita-docs/it/bozza/doc/profili-di-interazione/regole-comuni-rest-soap.html#formato-dei-dati
+
+#### DevOps
+
+https://www.terraform.io/
+https://github.com/gruntwork-io/terragrunt
+https://docs.microsoft.com/en-us/azure/devops/?view=azure-devops
+
 ### Internal workshops
 
 We periodically run short internal workshop sessions to facilitate knowledge sharing between us.

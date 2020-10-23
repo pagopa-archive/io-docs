@@ -60,33 +60,41 @@ organization. The Slack organization is open and anybody can join it.
 
 The IO team hangs out in the following channels:
 
+- `#prod_io` - non technical discussions and important communications
 - `#dev_io` - this is where most development activity happens, join this channel if you're actively contributing to the project
+- `#io_api` - technical discussions relative to the backend of the platform
+
+Here are some slack channels you may want to join as well:
+
 - `#io_status` - this is populated by bots, sharing various alerts and status reports
 - `#io_ci` - this is populated by bots, sharing the status of our CI builds
 - `#io_github` - this is populated by bots, sharing the status of our Github activity
 
-### Weekly Review and Planning calls
+### Planning calls
 
-1. Every Tuesday at 2pm CET we have the product review and planning call.
-1. We use Google Meet
+1. Always send an agenda in advance using Fellow, in order to let people understand if they must join the meeting or their presence is optional
 1. It is OK to talk over people or interrupt people to ask questions, cheer for them or show your compassion. This encourages more conversation and feedback in the call. Also see the interruption item in the video calls below.
-1. The sprint planning and review call is structured as follows:
-   1. We start with some greetings and chitchat while we wait for all the participants to join (max 5 minutes).
-   1. We start reviewing each story in the the backlog from the top (first the work in progress stories, then the unstarted stories).
-   1. Since the backlog is looooong and we don't have all day, we try to keep the discussion of each story short (usually under 5 minutes) - this is also as a form of respect to the participants' time as the discussion of a single story usually happens between 2-3 people (agains 10+ participating in the call).
-   1. If a story is labeled `on-hold` we skip it, unless somebody has some reason to un-hold it.
-   1. If the story is still in progress, the story owner updates the rest of the team about the status. The story gets updated in case some blockers emerge.
-   1. Stories get updated or new stories get created right away in case the scope of an existing story is incomplete.
-   1. Any decision or clarification about a story gets written down in a comment for that story for future reference (also because there may be some team member missing during the call and they would miss this information if we don't write it down).
-   1. If a story has been delivered and not yet accepted or rejected, if it's possible to verify its status quickly, we do it by accepting or rejecting it right away.
-   1. We try to keep technical discussions about a story outside this call (either in the story comments, in its PR comments or with a dedicated call).
-   1. When we completed reviewing the current stories, we proceed reviewing the topmost unstarted stories (usually around 10-15, depending on how many people will be contributing to the next sprint).
-   1. If there is a clear owner for a story we assign it right away, or else it's up to anybody whishing to work on that story to assign it to himself.
-   1. During the review of unstarted stories we try also to reorder the stories based on the updated priorities (this happens frequently when we have new releases or some critical bugs emerge).
-   1. At the end of the review there may be the need to discuss further about a specific story or issue, in this case all participants that are not involved in the discussion can drop off the call.
-   1. The review and planning that happens during this call is not set in stone, during the following days we may reprioritize or add stories if some critical issue comes up or if we find out that some planned story can't be worked on due to a blocker.
-   1. The review and planning that happens during this call is not set in stone, during the following days we may reprioritize or add stories if some critical issue comes up or if we find out that some planned story can't be worked on due to a blocker.
-   1. The review and planning that happens during this call is not set in stone, during the following days we may reprioritize or add stories if some critical issue comes up or if we find out that some planned story can't be worked on due to a blocker.
+
+#### Sprint (update & plan)
+
+The sprint planning and review call is structured as follows:
+
+1.  We start with some greetings and chitchat while we wait for all the participants to join (max 5 minutes).
+1.  We start reviewing each story in the the backlog from the top (first the work in progress stories, then the unstarted stories).
+1.  Since the backlog is looooong and we don't have all day, we try to keep the discussion of each story short (usually under 5 minutes) - this is also as a form of respect to the participants' time as the discussion of a single story usually happens between 2-3 people (agains 10+ participating in the call).
+1.  If a story is labeled `on-hold` we skip it, unless somebody has some reason to un-hold it.
+1.  If the story is still in progress, the story owner updates the rest of the team about the status. The story gets updated in case some blockers emerge.
+1.  Stories get updated or new stories get created right away in case the scope of an existing story is incomplete.
+1.  Any decision or clarification about a story gets written down in a comment for that story for future reference (also because there may be some team member missing during the call and they would miss this information if we don't write it down).
+1.  If a story has been delivered and not yet accepted or rejected, if it's possible to verify its status quickly, we do it by accepting or rejecting it right away.
+1.  We try to keep technical discussions about a story outside this call (either in the story comments, in its PR comments or with a dedicated call).
+1.  When we completed reviewing the current stories, we proceed reviewing the topmost unstarted stories (usually around 10-15, depending on how many people will be contributing to the next sprint).
+1.  If there is a clear owner for a story we assign it right away, or else it's up to anybody whishing to work on that story to assign it to himself.
+1.  During the review of unstarted stories we try also to reorder the stories based on the updated priorities (this happens frequently when we have new releases or some critical bugs emerge).
+1.  At the end of the review there may be the need to discuss further about a specific story or issue, in this case all participants that are not involved in the discussion can drop off the call.
+1.  The review and planning that happens during this call is not set in stone, during the following days we may reprioritize or add stories if some critical issue comes up or if we find out that some planned story can't be worked on due to a blocker.
+1.  The review and planning that happens during this call is not set in stone, during the following days we may reprioritize or add stories if some critical issue comes up or if we find out that some planned story can't be worked on due to a blocker.
+1.  The review and planning that happens during this call is not set in stone, during the following days we may reprioritize or add stories if some critical issue comes up or if we find out that some planned story can't be worked on due to a blocker.
 
 ### Video Calls
 
@@ -100,8 +108,8 @@ The IO team hangs out in the following channels:
    1. For a newcomer to the conversation, it's easier and more efficient to parse an issue, than to read a video transcript or watch it.
    1. Conversations in issues and stories are easily searchable. Video calls are not.
 1. Having pets, children, significant others, friends, and family visible during video chats is encouraged. If they are human, ask them to wave at your remote team member to say "Hi".
-1. We prefer Google Hangout.
-1. For meetings that are scheduled via calendar there is automatically a Google Hangouts URL added. This is the meeting place. Having a URL in advance is much more reliable than trying to call via Hangouts as the meeting start.
+1. We prefer Google Meet.
+1. For meetings that are scheduled via calendar there is automatically a Google Meets URL added. This is the meeting place. Having a URL in advance is much more reliable than trying to call via Meets as the meeting start.
 1. Use a headset with a microphone, Apple Earpods are great. Do not use computer speakers, they cause an echo. Do not use your computer microphone, it accentuates background noise. If you want to use your Bose headphones that is fine but please ensure the microphone is active.
 1. In video calls everyone should own a camera and a headset, even when they are in the same room. This helps seeing and hearing the person that is talking.
 1. It also allows people to easily talk and mute themselves. Using a headset also prevents echo. You wouldn't share an office seat together, so don't share your virtual seat at the table.

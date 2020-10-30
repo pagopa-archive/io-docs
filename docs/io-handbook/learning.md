@@ -62,8 +62,7 @@ In few words: anything you think your colleagues can benefit from.
 - Come prepared: take the right time to prepare slide/code/sandboxes in advance. Consider assign yourself a story on the issue tracker _(example: Plan typescript workshop)_.
 
 #### How to run a workshop
-
-- Record the presentation so anyone can enjoy it later. Please refer to [our guidelines for video recording](https://github.com/pagopa/io-handbook/blob/master/communication.md#video-recordings).
+- Record the presentation so anyone can enjoy it later. Please refer to [our guidelines for video recording](https://github.com/pagopa/io-docs/blob/main/docs/io-handbook/communication.md#video-recordings).
 
 #### How to share the content of a workshop
 

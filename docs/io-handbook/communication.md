@@ -126,6 +126,7 @@ The sprint planning and review call is structured as follows:
 1. If you're going to share code, increase the font size to make it readable at low resolution (18+ should work)
 1. When recording a screen share with Google Meet, "pin" the video stream so that it takes 100% of the video, or else it gets rescaled to make space for the speaker avatar
 1. Be careful not to show secrets, password and api keys when you share your screen
+1. Consider to turn off notifications when recording (on macOs, that can be done using [_do not disturb_ mode](https://support.apple.com/en-gb/guide/mac-help/mchl999b7c1a/mac)). Other than annoying, notifications can reveal informations not meant to be public
 
 ### Writing Style Guidelines
 

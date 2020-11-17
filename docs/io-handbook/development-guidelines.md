@@ -57,7 +57,7 @@ We prepared [a script](https://github.com/pagopa/developer-laptop) that setup a 
 
 ### NodeJS
 
-- Use [nodenv](https://github.com/nodenv/nodenv) for setting per-project version of `node`.
+- Use [nodenv](https://github.com/nodenv/nodenv) or [nvm](https://github.com/nvm-sh/nvm) for setting per-project version of `node`.
 - Use [yarn](https://yarnpkg.com/) for package management
 
 ### TypeScript
@@ -71,12 +71,12 @@ We prepared [a script](https://github.com/pagopa/developer-laptop) that setup a 
 - Favor the use of ["pure" functions](https://medium.com/@jamesjefferyuk/javascript-what-are-pure-functions-4d4d5392d49c)
 - Use [Option](https://github.com/gcanti/fp-ts/blob/master/src/Option.ts) and avoids `null` / `undefined` checks
 - To handle errors, return [Either](https://github.com/gcanti/fp-ts/blob/master/src/Either.ts) instead of throwing exceptions
-- use `Promises` instead of callbacks for the asynchronous code. Limits the use of callbacks to interaction with existing libraries (ideally you wrap promisify callbaks though)
+- use `TaskEither` instead of callbacks (or promises) for the asynchronous code. Limits the use of callbacks (or promises) to the interaction with existing libraries (ideally you promisify callbaks and taskify the result though)
 - Consider using `async` / `await` instead of `then` / `catch` if it can make the code more readable
 - Use common code (types and functions) defined in [italia-ts-commons](https://github.com/pagopa/italia-ts-commons) (e.g. `NonEmptyString`, `DateFromString`, `EmailString`, etc.)
 - Use [io-ts](https://github.com/gcanti/io-ts) to defined types that validate at compile and run-time.
 - Use [fp-ts](https://github.com/gcanti/fp-ts) for functional data structures (i.e. `Option`, `Either`, `NonEmptyArray`, etc...)
-- Use [italia-utils](https://github.com/pagopa/italia-utils) for generating `io-ts` models from OpenAPI specs.
+- Use [italia-utils](https://github.com/pagopa/italia-utils) for generating `io-ts` models and API client from the OpenAPI specs.
 - Refer to the [React Typescript cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet) to type React Components
 
 ### Development Style Guide

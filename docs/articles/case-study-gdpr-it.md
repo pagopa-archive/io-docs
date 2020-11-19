@@ -17,7 +17,7 @@ In questo articolo vogliamo condividere le soluzioni tecniche messe in campo per
 L'implementazione che andremo a presentare è stata pensata per soddisfare i seguenti requisiti:
 * Come Cittadino voglio poter richiedere la cancellazione dei miei dati.
 * Come Cittadino voglio poter ritirare la precedente richiesta entro 7gg.
-* Come DPO voglio che sia tenuta traccia di tutte le richieste del Cittadino e dello stato di lavorazione delle stesse.
+* Come DPO (Data Processing Officer) voglio che sia tenuta traccia di tutte le richieste del Cittadino e dello stato di elaborazione delle stesse.
 * Come Cittadino voglio essere notificato dell'avvenuta cancellazione
 * Come DPO voglio mantenere i dati del Cittadino per gestire eventuali contestazioni o contenziosi
 

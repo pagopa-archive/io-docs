@@ -56,7 +56,7 @@ Durable Functions è un'estensione di Azure Functions che facilita lo sviluppo d
 
 Per maggiori dettagli rimandiamo alla [documentazione di Azure Durable Functions](https://docs.microsoft.com/it-it/azure/azure-functions/durable/durable-functions-overview).
 
-Noi del team di IO facciamo largo uso di queste funzionalità e in particolare due tipo di funzioni chiamate _Orchestrator_ e _Activity_. [La documentazione di Azure](https://docs.microsoft.com/it-it/azure/azure-functions/durable/durable-functions-types-features-overview#orchestrator-functions) è il miglior inizio per capire questi due strumenti, volendoli però riassumere potremmo dire che:
+Noi del team di IO facciamo largo uso di queste funzionalità e in particolare due tipologie di funzioni chiamate _Orchestrator_ e _Activity_. [La documentazione di Azure](https://docs.microsoft.com/it-it/azure/azure-functions/durable/durable-functions-types-features-overview#orchestrator-functions) è il miglior inizio per capire questi due strumenti, volendoli però riassumere potremmo dire che:
 * le Activity Functions sono dei singoli job, solitamente asincroni (letture/scritture su database, storage, interrogazione di API di terze parti, etc);
 * le Orchestrator Functions sono delle istanze che mantengono un proprio stato e possono essere messe in pausa e riattivate.
 

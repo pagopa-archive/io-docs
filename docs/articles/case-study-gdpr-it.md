@@ -45,7 +45,7 @@ Abbiamo messo a disposizione delle API REST due endpoint dedicati:
 * [richiedere la cancellazione](https://github.com/pagopa/io-functions-app/tree/597853ffbb3b0e1f8594592fe04b302cad5fdee5/UpsertUserDataProcessing);
 * [annullare la precedente richesta](https://github.com/pagopa/io-functions-app/tree/597853ffbb3b0e1f8594592fe04b302cad5fdee5/AbortUserDataProcessing).
 
-Sono due tipici handler http di cui non approfondiremo le implementazioni.
+Sono due tipici handler HTTP REST di cui non approfondiremo le implementazioni.
 
 ### Workflow di cancellazione
 > TODO: qui spiegazione in prosa del workflow

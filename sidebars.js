@@ -3,6 +3,11 @@ module.exports = {
     "index",
     {
       type: "category",
+      label: "Articles",
+      items: ["articles/case-study-gdpr-it"],
+    },
+    {
+      type: "category",
       label: "Handbook",
       items: [
         "io-handbook/index",

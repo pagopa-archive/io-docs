@@ -12,7 +12,7 @@ In questo articolo vogliamo condividere le soluzioni tecniche messe in campo per
 
 ## Specifiche
 
-L'implementazione che andremo a presentare è stata pensata per soddisfare i seguenti requisiti:
+L'implementazione che andiamo a presentare è stata pensata per soddisfare i seguenti requisiti:
 
 - Come Cittadino voglio poter richiedere la cancellazione dei miei dati.
 - Come Cittadino voglio poter ritirare la precedente richiesta entro 7gg.

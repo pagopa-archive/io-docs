@@ -11,6 +11,24 @@ title: Learning and knowledge sharing
 If you want to learn about languages and tech stacks we're using here are
 some useful resources:
 
+#### Basics
+
+- https://www.typescriptlang.org/
+- https://jestjs.io/
+
+#### Frontend (web, app)
+
+- https://reactjs.org/docs/getting-started.html
+- https://facebook.github.io/react-native/
+- https://github.com/piotrwitek/react-redux-typescript-guide
+- https://redux.js.org/
+- https://redux-saga.js.org/
+- https://github.com/piotrwitek/typesafe-actions
+
+#### Testing
+
+- https://kentcdodds.com/blog
+
 #### Functional programming
 
 - https://www.manning.com/books/programming-with-types
@@ -18,15 +36,10 @@ some useful resources:
 - http://www.tomharding.me/
 - https://github.com/stoeffel/awesome-fp-js
 
-#### Testing
-
-- https://kentcdodds.com/blog
-
-#### React / redux in Typescript
-
-- https://github.com/piotrwitek/react-redux-typescript-guide
-
 #### fp-ts / io-ts
+
+- https://github.com/gcanti/fp-ts/tree/1.x
+- https://github.com/gcanti/io-ts/tree/1.x
 
 - https://dev.to/gcanti/
 - https://gcanti.github.io/fp-ts/recipes/async.html

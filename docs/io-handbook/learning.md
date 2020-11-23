@@ -40,7 +40,7 @@ some useful resources:
 
 - https://github.com/gcanti/fp-ts/tree/1.x
 - https://github.com/gcanti/io-ts/tree/1.x
-
+- https://rlee.dev/writing/practical-guide-to-fp-ts-part-1 (2.x)
 - https://dev.to/gcanti/
 - https://gcanti.github.io/fp-ts/recipes/async.html
 - https://gcanti.github.io/fp-ts/recipes/interoperability.html

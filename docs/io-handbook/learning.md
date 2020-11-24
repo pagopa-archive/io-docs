@@ -20,6 +20,7 @@ some useful resources:
 
 - https://reactjs.org/docs/getting-started.html
 - https://facebook.github.io/react-native/
+- https://react-typescript-cheatsheet.netlify.app/
 - https://github.com/piotrwitek/react-redux-typescript-guide
 - https://redux.js.org/
 - https://redux-saga.js.org/

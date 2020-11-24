@@ -1,6 +1,7 @@
 ---
-title: "Case study: garantire il diritto all'oblio" created:
-"2020-11-13T16:43:39.086Z" modified: "2020-11-14T09:47:45.393Z"
+title: "Case study: garantire il diritto all'oblio"
+created: "2020-11-13T16:43:39.086Z"
+modified: "2020-11-14T09:47:45.393Z"
 ---
 
 Quando progettiamo una nuova funzionalità per l'app IO, la più grande sfida che

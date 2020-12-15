@@ -32,19 +32,37 @@ run `/iodeploy` into any Slack channel to see how many changes are waiting to be
 For each project you'll get a link to the GitHub code diff between the release candidate (HEAD)
 and the latest version released.
 
-## Create a GitHub release
-
-After checking code changes you **_must_** create a new release on GitHub
-(check out if it is a minor or a major) before proceed with the next step.
-
 ## Run the pipeline
 
 1. Navigate to the [Azure DevOps](https://dev.azure.com/pagopa-io/) portal
 1. Click on **_io-functions-assets_**' s project
-1. Go to **_Pipelines_** and select a pipeline from list (i.e _pagopa.io-functions-assets_)
+1. Go to **_Pipelines_** and select the deploy pipeline from list (i.e _pagopa.io-functions-assets.deploy_)
 1. Click on **_Run Pipeline_** button, you should see a right bar menu ![Run pipeline](../../static/img/run_pipeline.png)
-1. Leave all options unchanged and then select the **_Run_** button
+1. Check the options and value them according to the scenario you are in (see below); when ready, press the **_Run_** button
 1. Monitor the job status on the pipeline jobs detail pages: ![Pipeline status](../../static/img/pipeline_status.png) ![Pipeline Job check](../../static/img/Pipeline_status_check.png)
+
+The deploy pipeline is configured to creare a release itself, so no previous operations are needed in order to deploy a new version of the application.
+
+A common deploy pipeline will look like the following:
+![Pipeline stages](../../static/img/pipeline_stages_new_release.png)
+
+### Scenario: deploy new features
+
+The most common case: new code is added to `master` branch and you want to ship it. On the pipeline option screen, do the following:
+1. Select `master` as base `branch/tag`
+1. Choose between `major`, `minor` or `patch` depending on the kind of changes introduced; application version will be bumped accordingly 
+1. Leave stages untouched
+
+The pipeline will bump the application version, create a new release on project's Github page, build and deploy the application using a _staging_ slot to have a warm start.
+
+### Scenario: deploy an existing version
+
+This scenario happens when it is needed to roll back the application to a previous version (or you want to retry a failed deploy without creating a new release). On the pipeline option screen, do the following:
+1. Select `refs/tags/v{VERSION}-RELEASE` as base `branch/tag`, where `{VERSION}` is the semver number to reference code to.
+1. Ignore the choice between `major`, `minor` or `patch`, as no release will be created.
+1. Leave stages untouched.
+
+The `Release` stage will be executed successufully anyway, but no release will be created. The application is then built and deployrd using a _staging_ slot to have a warm start.
 
 ## Monitor production logs
 

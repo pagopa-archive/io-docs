@@ -31,7 +31,7 @@ In order to connect the pipeline to a Github repository, we must set a `Service 
 
 ### Connections to read from the repository 
 
-When creating the first pipeline of a project, a default service connection is created. This connection is of type `GitHub (using azure pipelines app)`, meaning it is linked to the `Azure Pipelines` Github App installed in the application reposiory; such app is installed along with the first pipeline, too (check _settings/installations_ page on the repository). 
+When creating the first pipeline of a project, a default service connection is created. This connection is of type `GitHub (using azure pipelines app)`, meaning it is linked to the `Azure Pipelines` Github App installed in the application repository; such app is installed along with the first pipeline, too (check _settings/installations_ page on the repository). 
 This type of service connection is good enough for the pipeline to checkout code, perform checks and have results to be displayed directly in a pull request thread. 
 
 ### Connections to push into the repository

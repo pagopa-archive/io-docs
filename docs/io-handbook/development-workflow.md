@@ -161,8 +161,20 @@ Features and bugs have the following states:
 1. Include explanation comments in the PR: this can help the reviewers in making the review faster. At the same time try to be succinct, not verbose, comments should have a high informational density.
 1. Ask for feedback early by creating [draft pull requests](https://github.blog/2019-02-14-introducing-draft-pull-requests/). This can shorten dramatically approval and review time.
 
+### Deploy
+
+* Every developer is encouraged to deploy the project she/he is working on.
+* We prefer small and frequent updates, so try not to accumulate too many changes in a single deploy
+* Plan deploys to be reversible if any problem occurs.
+* Code is deployable as soon as it's merged on the `master` branch. 
+* For every deploy we mark a release by both bumping the package version and tagging the relative commit accordingly (we try to use [SemVer](https://semver.org/))
+* We aim to automate the whole process as much as possible.
+
+Although every project may have its own quirks, this is usually valid.
+
 ### Templates
 
 When you need to create a new project repository, use a [repository template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/). Here are the available templates:
 
 - [io-template-typescript](https://github.com/pagopa/io-template-typescript): For nodejs/Typescript projects
+- [io-functions-template](https://github.com/pagopa/io-functions-template): For Azure Functions projects

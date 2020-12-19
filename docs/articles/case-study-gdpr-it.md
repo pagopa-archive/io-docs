@@ -6,7 +6,7 @@ modified: "2020-11-14T09:47:45.393Z"
 
 Quando progettiamo una nuova funzionalità per l'app IO, tra le sfide che
 dobbiamo affrontare primeggia la necessità di conciliare un'esperienza utente
-morbida con elevati requisiti di sicurezza e privacy: la complessità
+morbida con elevati requisiti di sicurezza e privacy. La complessità
 dell'implementazione si estende di pari passo a quella imposta dal contesto
 giuridico in cui il progetto si colloca; un percorso che richiede l'assidua
 collaborazione tra sviluppatori, service designer, legali, esperti di sicurezza
@@ -61,7 +61,7 @@ sono state modellate tramite [l'entità `UserDataProcessing`](https://github.com
   (`choice`, che può aver valore `DOWNLOAD` o `DELETE`);
 - lo stato di lavorazione può essere `PENDING`, `WIP`, `ABORTED`, `FAILED` o
   `CLOSED`;
-- i record dnon vengono aggiornati ma salvati sul database in modalità
+- i record non vengono aggiornati ma salvati sul database in modalità
   _append-only_ in modo da garantire una storicizzazione immutabile delle richieste.
 
 ### Endpoint

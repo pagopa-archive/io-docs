@@ -221,7 +221,7 @@ Anche in questo caso, l'implementazione finale è consultabile nel [workflow att
 
 ### Azionamento del workflow
 
-Piccola menzione per il meccanismo incaricato di azionare il workflow di cui abbiamo parlato. Attualmente viene gestito tramite un trigger sulla collection `user-data-collection` del database cosmos, richiamato ad ogni documento inserito. Guardando [l'implementazione della funzione](https://github.com/pagopa/io-functions-admin/blob/dad714275eb0bf505916ce375d390bbfe6360582/UserDataProcessingTrigger%2Findex.ts#L1), ci si accorge che per ogni documento si decide se:
+Piccola menzione per il meccanismo incaricato di azionare il workflow di cui abbiamo parlato. Attualmente viene gestito tramite un trigger sulla collection `user-data-collection` del database CosmosDB, richiamato ad ogni documento inserito. Guardando [l'implementazione della funzione](https://github.com/pagopa/io-functions-admin/blob/dad714275eb0bf505916ce375d390bbfe6360582/UserDataProcessingTrigger%2Findex.ts#L1), ci si accorge che per ogni documento si decide se:
 
 * [avvia un workflow di accesso ai dati](https://github.com/pagopa/io-functions-admin/blob/dad714275eb0bf505916ce375d390bbfe6360582/UserDataProcessingTrigger%2Findex.ts#L116)
 * [avvia un workflow di cancellazione](https://github.com/pagopa/io-functions-admin/blob/dad714275eb0bf505916ce375d390bbfe6360582/UserDataProcessingTrigger%2Findex.ts#L133)

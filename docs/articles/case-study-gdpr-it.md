@@ -223,9 +223,9 @@ Anche in questo caso, l'implementazione finale è consultabile nel [workflow att
 
 Piccola menzione per il meccanismo incaricato di azionare il workflow di cui abbiamo parlato. Attualmente viene gestito tramite un trigger sulla collection `user-data-collection` del database CosmosDB, richiamato ad ogni documento inserito. Guardando [l'implementazione della funzione](https://github.com/pagopa/io-functions-admin/blob/dad714275eb0bf505916ce375d390bbfe6360582/UserDataProcessingTrigger%2Findex.ts#L1), ci si accorge che per ogni documento si decide se:
 
-* [avvia un workflow di accesso ai dati](https://github.com/pagopa/io-functions-admin/blob/dad714275eb0bf505916ce375d390bbfe6360582/UserDataProcessingTrigger%2Findex.ts#L116)
-* [avvia un workflow di cancellazione](https://github.com/pagopa/io-functions-admin/blob/dad714275eb0bf505916ce375d390bbfe6360582/UserDataProcessingTrigger%2Findex.ts#L133)
-* [emette l'evento di annullamento della cancellazione](https://github.com/pagopa/io-functions-admin/blob/dad714275eb0bf505916ce375d390bbfe6360582/UserDataProcessingTrigger%2Findex.ts#L149)
+* [avviare un workflow di accesso ai dati](https://github.com/pagopa/io-functions-admin/blob/dad714275eb0bf505916ce375d390bbfe6360582/UserDataProcessingTrigger%2Findex.ts#L116)
+* [avviare un workflow di cancellazione](https://github.com/pagopa/io-functions-admin/blob/dad714275eb0bf505916ce375d390bbfe6360582/UserDataProcessingTrigger%2Findex.ts#L133)
+* [emettere l'evento di annullamento della cancellazione](https://github.com/pagopa/io-functions-admin/blob/dad714275eb0bf505916ce375d390bbfe6360582/UserDataProcessingTrigger%2Findex.ts#L149)
 
 o semplicemente ignorarlo, a seconda dei casi. 
 

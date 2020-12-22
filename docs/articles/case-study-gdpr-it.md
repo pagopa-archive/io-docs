@@ -148,8 +148,6 @@ In pratica, interrompiamo l'esecuzione del workflow e decidiamo che possa essere
 In pseudo-codice possiamo descriverlo così:
 
 ```
-PAUSA il workflow
-
 ATTENDI riattivazione CON ["richiesto annullamento" OPPURE "passati 7 giorni"]
 
 SE riattivazione = "passati 7 giorni"

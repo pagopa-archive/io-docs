@@ -77,8 +77,6 @@ Inizialmente abbiamo implementato gli endpoint dedicati (API REST):
 
 ### Workflow di cancellazione
 
-> TODO: qui spiegazione in prosa del workflow
-
 Qui entrano in gioco le Durable Functions. Durable Functions è un'estensione di
 Azure Functions che facilita lo sviluppo di workflow in cui si sovrappongo _long
 running job_, interazioni umane, timer e operazioni asincrone in generale. Per

@@ -179,7 +179,7 @@ if (triggeredEvent === intervalExpiredEvent) {
 }
 ```
 
-La parte interessante è il metodo `Task.any` che risolve la _race condition_ tra gli _N_ eventi in input (due in questo caso), istruendo l'Orchestrator per bloccarsi e riattivarsi. L'implemetazione finale è consultabile in [questo punto](https://github.com/pagopa/io-functions-admin/blob/924a7ed8371681ff0fc8b4b2869695d0808ac9bf/UserDataDeleteOrchestrator%2Fhandler.ts#L366) del workflow.
+La parte interessante è il metodo `Task.any`: il metodo ritorna la prima attività conclusa tra quelle passate in input, nel caso specifico, l'evento di expire o la richiesta di cancellazione. L'implemetazione finale è consultabile in [questo punto](https://github.com/pagopa/io-functions-admin/blob/924a7ed8371681ff0fc8b4b2869695d0808ac9bf/UserDataDeleteOrchestrator%2Fhandler.ts#L366) del workflow.
 
 #### focus: controllo concorrenza con richiesta di download
 

@@ -121,7 +121,7 @@ implementato tramite una Orchestrator function. É una funzione abbastanza lunga
 (180 righe), ma sorprendentemente lineare in considerazione della logica articolata che implementa.
 Come detto, lo stile è imperativo e le istruzioni vengono eseguite una dopo l'altra a meno di errori, che vengono gestiti nel `catch` finale. Ci sono però alcuni passaggi che meritano un approfondimento, di seguito proviamo a raccontarli.
 
-#### focus: gestione wait/interrupt
+#### Focus: gestione "periodo di grazia" per eliminazione contenuti utente
 
 Il requisito
 

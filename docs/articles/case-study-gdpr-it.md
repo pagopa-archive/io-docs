@@ -93,7 +93,7 @@ citare la documentazione ufficiale:
 Per maggiori dettagli rimandiamo alla [documentazione di Azure Durable
 Functions](https://docs.microsoft.com/it-it/azure/azure-functions/durable/durable-functions-overview).
 
-Noi del team di IO facciamo largo uso di queste funzionalità e in particolare
+Nell'implementazione del backend di IO facciamo largo uso di queste funzionalità e in particolare
 due tipologie di funzioni chiamate _Orchestrator_ e _Activity_. [La
 documentazione di
 Azure](https://docs.microsoft.com/it-it/azure/azure-functions/durable/durable-functions-types-features-overview#orchestrator-functions)

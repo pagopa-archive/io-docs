@@ -100,6 +100,7 @@ Each theme describes [trends and topics](https://www.thoughtworks.com/radar/a-z)
 #### Trial
 
 - [Netlify](https://www.thoughtworks.com/radar/platforms/netlify)
+- [HasuraSQL](https://hasura.io/)
 
 #### Assess
 

@@ -4,7 +4,7 @@ title: Technology Radar
 
 The Radar is an ever evolving document that describes what we find interesting
 and useful in the software development practice - these are mostly things
-that we we should consider using in our projects. The Radar it's inspired by
+that we should consider using in our projects. The Radar it's inspired by
 [Thoughtworks Technology Radar](https://www.thoughtworks.com/radar).
 
 The Radar is structured around four main themes: Techniques, Tools, Platforms,

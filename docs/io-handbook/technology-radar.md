@@ -12,10 +12,10 @@ Languages & Frameworks.
 
 Each theme describes [trends and topics](https://www.thoughtworks.com/radar/a-z) grouped in four rings:
 
-1. Adopt: mature, you should definitely use it in your production projects
-1. Trial: suitable for early adoption in projects that can bare some risk
-1. Assess: not ready yet for production use, should be used in PoCs or side projects
-1. Hold: these are usually over hyped or reaching the end of their life, try to avoid
+1. Adopt: we have it in prod, we like it and we think this is going to stay for a while; you should definitely go for it for new projects.
+1. Trial: we think it can be useful to us, but we're not sure yet; it is worth to spend some effort on experimenting on this; suitable for early adoption in projects that can bare some risk.
+1. Assess: it is emerging in the industry, but it's not 100% clear if it can help us and if it's stable enough; we'd like to explore on this investing a little time, maybe a PoC or an internal workshop.
+1. Dismiss: we use to have it in prod, and in some cases we still do, but it's not going to stay for long; we should spend no time on it and find and alternatives.
 
 ## Techniques
 
@@ -50,7 +50,7 @@ Each theme describes [trends and topics](https://www.thoughtworks.com/radar/a-z)
 - [Wardley mapping](https://www.thoughtworks.com/radar/techniques/wardley-mapping)
 - [Team Topologies](https://teamtopologies.com/key-concepts)
 
-#### Hold
+#### Dismiss
 
 - [Log aggregation for business analytics](https://www.thoughtworks.com/radar/techniques?blipid=202005090)
 - [Microservice envy](https://www.thoughtworks.com/radar/techniques/microservice-envy)
@@ -83,7 +83,7 @@ Each theme describes [trends and topics](https://www.thoughtworks.com/radar/a-z)
 - [Mountebank](https://www.thoughtworks.com/radar/tools/mountebank)
 - [WireMock](https://www.thoughtworks.com/radar/tools/wiremock)
 
-#### Hold
+#### Dismiss
 
 - [CircleCI](https://www.thoughtworks.com/radar/tools/circleci)
 
@@ -104,7 +104,7 @@ Each theme describes [trends and topics](https://www.thoughtworks.com/radar/a-z)
 
 #### Assess
 
-#### Hold
+#### Dismiss
 
 - [Low-code platforms](https://www.thoughtworks.com/radar/platforms/low-code-platforms)
 - [Overambitious API gateways](https://www.thoughtworks.com/radar/platforms/overambitious-api-gateways)
@@ -130,6 +130,6 @@ Each theme describes [trends and topics](https://www.thoughtworks.com/radar/a-z)
 - [Tailwind CSS](https://www.thoughtworks.com/radar/languages-and-frameworks/tailwind-css)
 - [WebAssembly](https://www.thoughtworks.com/radar/languages-and-frameworks/webassembly)
 
-#### Hold
+#### Dismiss
 
 - [Bootstrap Italia](https://italia.github.io/bootstrap-italia/)

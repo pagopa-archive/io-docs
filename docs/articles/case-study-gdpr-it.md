@@ -232,31 +232,85 @@ o semplicemente ignorarlo, a seconda dei casi.
 Questo trigger è stata una soluzione molto semplice da implementare grazie al [_binding_](https://github.com/pagopa/io-functions-admin/blob/a1bb2b16edff9c04bd86da6cffe405b097ddacaf/UserDataProcessingTrigger%2Ffunction.json#L3) offerto dal runtime Azure Functions. Potremmo pensare di sostituirlo con un sistema più sofisticato, soprattutto considerando che non è compatibile con in nostro processo di _blue/green deployment_, tuttavia per il momento si sta comportando molto bene.
 
 ## Test
-
 ### Strategia
 
-> TODO: mettere in prosa la seguente lista
+I test che presentiamo in questo articolo sono pensati per essere eseguiti sulla logica in isolamento, sia rispetto ai dati che agli intervalli temporali. 
+Ci siamo messi nella condizione di valutare il workflow solamente in base all'output ricevuto rispetto ai diversi scenari d'utilizzo. 
+Ma come sono determinati questi scenari? Essenzialmente dalla combinazione di due cose: l'input fornito in ingresso all'Orchestrator e gli output delle Activity Functions utilizzate.
 
-- vogliamo eseguire unit test sul workflow: fornire un input e valutare l'output
-- dipendenze orchestrator: esplicite (valori temporali) implicite (activity)
-- separazione index/handler: i parametri temporali sono gestiti come dependency
-  injection, quindi possiamo testare sync
+Proprio per aumentare la testabilità, abbiamo la consuetudine di dividere l'implementazione della logica applicativa dal codice che serve a creare le connessioni verso risorse esterne, siano esse il database o un servizio web o la configurazione dell'ambiente in cui viene eseguita la nostra applicazione. Ogni `Function` viene quindi realizzata tramite un file `index.ts` - l'entry point richiesto dal framework di `Azure Functions` - in cui vengono validate le configurazioni, create le connessioni e istanziata la logica applicativa esposta dal file `handler.ts`; quest'ultimo non contiene riferimenti né risorse né alle configurazioni, le quali gli vengono fornite tramite _dependency injection_ e questa caratteristica ne rende possibile il test in isolamento tipico degli unit test.
 
-### Mocking
+`handler.ts` sarà il modulo su cui andremo ad eseguire i test.
 
-> TODO: mettere in prosa la seguente lista
+La strategia di esecuzione si può quindi riassumere nei seguenti passi:
+* definizione del contesto dello scenario: valori di input all'Orchestrator e output delle activity;
+* definizione dell'output atteso;
+* esecuzione dell'Orchestrator;
+* comparazione dell'otuput ottenuto rispetto all'output atteso.
 
-- mock delle activity: happy path di default
-- consume dell'orchestrator
 
-### Example
+### Implementazione
 
-> TODO: mettere in prosa la seguente lista
+Nel contesto di testare l'esecuzione del workflow i dettagli di ogni singola Activity hanno poca importanza; possono essere omessi, fin tanto che vengono considerati tutti i loro possibili output - di successo e di fallimento. 
 
-- esempio di test
+#### Ottenere l'output dell'orchestrator
+Come descritto prima, gli Orchestrator non sono semplici funzioni, ma Generatori. Per loro definizione, queste speciali funzioni hanno multipli output; di questi, gli intermedi sono utilizzati dal framework `Durable Functions` per richiamare le varie activity, passargli dei dati di input e ricevere i loro output.
+Nei nostri test siamo interessati all'ultimo output, quello che consideriamo il risultato del workflow. 
 
+Per questi motivi eseguirli non è sufficiente, vanno _consumati_ tutti gli output intermedi fino ad arrivare al risultato finale. 
+
+Il seguente snippet risolve questo meccanismo normalizzandolo in una funzione Javascript con il solo output finale:
+```ts
+const consumeOrchestrator = (orch) => {
+  let prevValue;
+  while (true) {
+    const { done, value } = orch.next(prevValue);
+    if (done) {
+      return value;
+    }
+    prevValue = value;
+  }
+};
+
+// example usage
+const result = 
+  consumeOrchestrator(
+    userDataDeleteOrchestrator(
+      context
+    )
+  );
+``` 
+
+L'implementazione di `consumeOrchestrator` è definita all'interno della [suite di test](https://github.com/pagopa/io-functions-admin/blob/fa05bc96b6a756d4b8f14769a59b556d0709eb7a/UserDataDeleteOrchestrator/__tests__/handler.test.ts#L136).
+
+#### Mocking delle Activity Functions
+
+Nel contesto di testare l'esecuzione del workflow, i dettagli di ogni singola Activity hanno poca importanza; possono essere omessi fin tanto che vengano considerati tutti i loro possibili output - di successo e di fallimento. In altre parole: **non vogliamo testare il funzionamento delle singole activity, ma come il nostro workflow si comporta rispetto ai loro output**. 
+
+In base a questo principio, nei nostri test utiliziamo delle versioni _mock_ delle singole activity. Ad esempio il seguente snippet definisce un'implementazione mock per l'activity `GetProfileActivity` che ritorna un profilo di esempio:
+```ts
+const getProfileActivity = jest.fn().mockImplementation(() =>
+  GetProfileActivityResultSuccess.encode({
+    kind: "SUCCESS",
+    value: aRetrievedProfile
+  })
+);
 ```
 
-```
+Questo snippet si trova all'interno della [suite di test](https://github.com/pagopa/io-functions-admin/blob/fa05bc96b6a756d4b8f14769a59b556d0709eb7a/UserDataDeleteOrchestrator/__tests__/handler.test.ts#L95).
 
-```
+Come da strategia di testing, il contesto di esecuzione di ogni scenario è determinato dagli output delle activity; il corollario è che per il setup di ogni test case è necessario definire un insieme di implementazioni mock e i relativi output. In realtà, la nostra implementazione semplifica questa esigenza tramite queste due convenzioni:
+* sono sempre definite implementazioni di default il cui risultato è lo _happy path_, il caso di successo;
+* per ogni scenario si va ad aggungere l'implementazione mock delle sole activity per le quali si vogliono testare casistiche differenti.
+
+
+### Esempi
+Per vedere esempi significativi di come abbiamo implementato gli unit test sul workflow, la cosa migliore è guardare il codice attualmente in produzione:
+* [test case: input non valido](https://github.com/pagopa/io-functions-admin/blob/fa05bc96b6a756d4b8f14769a59b556d0709eb7a/UserDataDeleteOrchestrator/__tests__/handler.test.ts#L160)
+* [test case: la procedura viene chiusa se viene richesto abort](https://github.com/pagopa/io-functions-admin/blob/fa05bc96b6a756d4b8f14769a59b556d0709eb7a/UserDataDeleteOrchestrator/__tests__/handler.test.ts#L342)
+* [test case: attendi se c'è un download in esecuzione](https://github.com/pagopa/io-functions-admin/blob/fa05bc96b6a756d4b8f14769a59b556d0709eb7a/UserDataDeleteOrchestrator/__tests__/handler.test.ts#L368)
+* [test case: una email viene inviata in caso di successo](https://github.com/pagopa/io-functions-admin/blob/fa05bc96b6a756d4b8f14769a59b556d0709eb7a/UserDataDeleteOrchestrator/__tests__/handler.test.ts#L406)
+
+## Conclusioni
+
+## Riferimenti

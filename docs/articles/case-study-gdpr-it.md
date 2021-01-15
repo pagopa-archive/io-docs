@@ -229,7 +229,7 @@ Piccola menzione per il meccanismo incaricato di azionare il workflow di cui abb
 
 o semplicemente ignorarlo, a seconda dei casi. 
 
-Questo trigger è stata una soluzione molto semplice da implementare grazie al [_binding_](https://github.com/pagopa/io-functions-admin/blob/a1bb2b16edff9c04bd86da6cffe405b097ddacaf/UserDataProcessingTrigger%2Ffunction.json#L3) offerto dal runtime Azure Functions. Potremmo pensare di sostituirlo con un sistema più sofisticato, soprattutto considerando che non è compatibile con in nostro processo di _blue/green deployment_, tuttavia per il momento si sta comportando molto bene.
+Questo trigger è stata una soluzione molto semplice da implementare grazie al [_binding_](https://github.com/pagopa/io-functions-admin/blob/a1bb2b16edff9c04bd86da6cffe405b097ddacaf/UserDataProcessingTrigger%2Ffunction.json#L3) offerto dal runtime Azure Functions.
 
 ## Test
 ### Strategia

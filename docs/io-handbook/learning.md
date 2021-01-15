@@ -50,6 +50,9 @@ some useful resources:
 
 - https://docs.microsoft.com/en-us/azure/azure-functions/
 - https://docs.microsoft.com/en-us/azure/azure-functions/durable
+- https://docs.microsoft.com/en-us/learn/paths/create-serverless-applications/
+- https://azure.microsoft.com/en-us/resources/azure-serverless-computing-cookbook/ 
+- https://github.com/marcduiker/azure-functions-university (youtube videos [here](https://github.com/marcduiker/azure-functions-university/blob/main/lessons/_index.md#lessons) )
 
 #### API
 

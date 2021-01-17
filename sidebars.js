@@ -14,6 +14,7 @@ module.exports = {
         "io-handbook/development-workflow",
         "io-handbook/development-guidelines",
         "io-handbook/development-styleguide",
+        "io-handbook/technology-radar",
         "io-handbook/cicd-setup",
         "io-handbook/how-to-deploy",
         "io-handbook/typescript-compiler-issues",

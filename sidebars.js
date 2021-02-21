@@ -7,6 +7,7 @@ module.exports = {
       items: [
         "io-handbook/index",
         "io-handbook/general",
+        "io-handbook/glossary",
         "io-handbook/how-to",
         "io-handbook/communication",
         "io-handbook/learning",

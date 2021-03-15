@@ -54,6 +54,10 @@ some useful resources:
 - https://azure.microsoft.com/en-us/resources/azure-serverless-computing-cookbook/ 
 - https://github.com/marcduiker/azure-functions-university (youtube videos [here](https://github.com/marcduiker/azure-functions-university/blob/main/lessons/_index.md#lessons) )
 
+#### Azure
+
+- Enterprise Messaging and Eventing: https://app.pluralsight.com/library/courses/microsoft-azure-enterprise-messaging-eventing/table-of-contents
+
 #### API
 
 - https://docs.italia.it/italia/piano-triennale-ict/lg-modellointeroperabilita-docs/it/bozza/doc/profili-di-interazione/regole-comuni-rest-soap.html#formato-dei-dati
